@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4D1A777-8F6D-4BBD-B3C6-4189208BECD9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>manolza</RootNamespace>
+    <AssemblyName>manolza</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\roomListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\roomListControl.Designer.cs">
+      <DependentUpon>roomListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\zipControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\zipControl.Designer.cs">
+      <DependentUpon>zipControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAC\reserveDAC.cs" />
+    <Compile Include="myInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myInfo.Designer.cs">
+      <DependentUpon>myInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reserveCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reserveCheck.Designer.cs">
+      <DependentUpon>reserveCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reserveLend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reserveLend.Designer.cs">
+      <DependentUpon>reserveLend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reserveStay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reserveStay.Designer.cs">
+      <DependentUpon>reserveStay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="roomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomList.Designer.cs">
+      <DependentUpon>roomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accomAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accomAdd.Designer.cs">
+      <DependentUpon>accomAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accomList.Designer.cs">
+      <DependentUpon>accomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\accomListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\accomListControl.Designer.cs">
+      <DependentUpon>accomListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAC\accomDAC.cs" />
+    <Compile Include="DAC\imageDAC.cs" />
+    <Compile Include="DAC\roomDAC.cs" />
+    <Compile Include="home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manolza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manolza.Designer.cs">
+      <DependentUpon>manolza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="join.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="join.Designer.cs">
+      <DependentUpon>join.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myAccom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myAccom.Designer.cs">
+      <DependentUpon>myAccom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myReserve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myReserve.Designer.cs">
+      <DependentUpon>myReserve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="review.Designer.cs">
+      <DependentUpon>review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="roomAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomAdd.Designer.cs">
+      <DependentUpon>roomAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAC\UserDAC.cs" />
+    <Compile Include="Util\CommonUtil.cs" />
+    <Compile Include="Util\DataGridViewUtil.cs" />
+    <Compile Include="ZipSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZipSearch.Designer.cs">
+      <DependentUpon>ZipSearch.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\roomListControl.resx">
+      <DependentUpon>roomListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\zipControl.resx">
+      <DependentUpon>zipControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myInfo.resx">
+      <DependentUpon>myInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reserveCheck.resx">
+      <DependentUpon>reserveCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reserveLend.resx">
+      <DependentUpon>reserveLend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reserveStay.resx">
+      <DependentUpon>reserveStay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomList.resx">
+      <DependentUpon>roomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="accomAdd.resx">
+      <DependentUpon>accomAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="accomList.resx">
+      <DependentUpon>accomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\accomListControl.resx">
+      <DependentUpon>accomListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manolza.resx">
+      <DependentUpon>manolza.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="join.resx">
+      <DependentUpon>join.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myAccom.resx">
+      <DependentUpon>myAccom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myReserve.resx">
+      <DependentUpon>myReserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="review.resx">
+      <DependentUpon>review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomAdd.resx">
+      <DependentUpon>roomAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZipSearch.resx">
+      <DependentUpon>ZipSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
